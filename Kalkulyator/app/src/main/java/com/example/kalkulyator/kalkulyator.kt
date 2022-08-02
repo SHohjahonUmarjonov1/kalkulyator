@@ -1,11 +1,13 @@
 package com.example.kalkulyator
 
+import java.math.BigDecimal
+
 fun main1(string: String): String {
     var string = string
-    val count_percent=string.count{it=='%'}
-    if (string.indexOf('%')>=0) {
-        for (i in 0..count_percent){
-            string= getPercent(string)
+    val count_percent = string.count { it == '%' }
+    if (string.indexOf('%') >= 0) {
+        for (i in 0..count_percent) {
+            string = getPercent(string)
         }
     }
     var numbers = mutableListOf<Double>()
@@ -58,8 +60,8 @@ fun main1(string: String): String {
         string = (string.toDouble() - sum).toString()
         numbers.clear()
         return string
-    }else{
-    return string
+    } else {
+        return string
     }
 }
 
@@ -164,8 +166,9 @@ fun getReplace_tobe(char: String, string: String): String {
         backstring = backstring.reversed()
         println(backstring)
     }
-    var value = backstring.toDouble() / nextstring.toDouble()
-    val newstring = string.replace(backstring + "/" + nextstring, value.toString())
+    var value = BigDecimal (backstring.toDouble() / nextstring.toDouble())
+    var newvalue=value.toPlainString()
+    val newstring =string.replace(backstring + "/" + nextstring, newvalue)
     return newstring
 }
 
@@ -258,25 +261,27 @@ fun getReplace_ayirish(char: String, string: String, numbers: MutableList<Double
 fun getPercent(string: String): String {
     var string = string
     var backstring = ""
-    var result: Double? =null
+    var result: BigDecimal? = null
+    var newresult:String?=null
     if ('%' in string) {
         var index = string.indexOf('%')
         if (index == 0) {
             string.drop(1)
             string = string
         } else {
-            index-=1
+            index -= 1
             while (string[index] != '+' && string[index] != '-' && string[index] != 'x' && string[index] != '/') {
                 backstring += string[index]
-                if (index==0) {
+                if (index == 0) {
                     break
                 }
-                index-=1
+                index -= 1
             }
-            backstring=backstring.reversed()
-            result=backstring.toDouble()/100
+            backstring = backstring.reversed()
+            result =BigDecimal(backstring.toDouble() / 100)
+            newresult=result.toPlainString()
         }
-        string=string.replace(backstring+'%',result.toString())
+        string = newresult?.let { string.replace(backstring + '%', it) }.toString()
     }
     return string
 }
