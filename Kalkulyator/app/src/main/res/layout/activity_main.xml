@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/input"
+        android:text="@string/activity_main_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="200dp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/linear"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:text="@string/app_name" />
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="8dp"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@id/linear2"
+        app:layout_constraintTop_toBottomOf="@id/input">
+
+        <ImageButton
+            android:id="@+id/clear"
+            android:src="@drawable/ic_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/ic_ellipse_1"
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:id="@+id/back"
+            android:src="@drawable/ic_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/ic_ellipse_1"
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:id="@+id/percent"
+            android:src="@drawable/ic__percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/ic_ellipse_1"
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:id="@+id/tobe"
+            android:src="@drawable/ic_tobe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/ic_ellipse_4"
+            tools:ignore="MissingConstraints" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linear2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="8dp"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@id/linear3"
+        app:layout_constraintTop_toBottomOf="@id/linear">
+
+        <ImageButton
+            android:id="@+id/seven"
+            android:src="@drawable/ic__seven"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/ic_ellipse_5"
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:id="@+id/eight"
+            android:src="@drawable/ic__eight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/ic_ellipse_5"
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:id="@+id/nine"
+            android:src="@drawable/ic__nine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/ic_ellipse_5"
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:id="@+id/increase"
+            android:src="@drawable/ic_kopaytirish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/ic_ellipse_4"
+            tools:ignore="MissingConstraints" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linear3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="8dp"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@id/linear4"
+        app:layout_constraintTop_toBottomOf="@id/linear2">
+
+        <ImageButton
+            android:id="@+id/four"
+            android:src="@drawable/ic__four"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/ic_ellipse_5"
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:id="@+id/five"
+            android:src="@drawable/ic__five"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/ic_ellipse_5"
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:id="@+id/six"
+            android:src="@drawable/ic__six"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/ic_ellipse_5"
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:id="@+id/plus"
+            android:src="@drawable/ic_plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/ic_ellipse_4"
+            tools:ignore="MissingConstraints" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linear4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="8dp"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@id/linear5"
+        app:layout_constraintTop_toBottomOf="@id/linear3">
+
+        <ImageButton
+            android:id="@+id/one"
+            android:src="@drawable/ic__one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/ic_ellipse_5"
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:id="@+id/two"
+            android:src="@drawable/ic__two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/ic_ellipse_5"
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:id="@+id/three"
+            android:src="@drawable/ic__three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/ic_ellipse_5"
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:id="@+id/subtraction"
+            android:src="@drawable/ic_ayiruv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/ic_ellipse_4"
+            tools:ignore="MissingConstraints" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linear5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="8dp"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear4">
+
+        <ImageButton
+            android:id="@+id/zero"
+            android:src="@drawable/ic__zero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/ic_rectangle_1__1_"
+            tools:ignore="MissingConstraints" >
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/comma"
+            android:src="@drawable/ic__comma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/ic_ellipse_5"
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:id="@+id/equality"
+            android:src="@drawable/ic_equality"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/ic_ellipse_4"
+            tools:ignore="MissingConstraints" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
